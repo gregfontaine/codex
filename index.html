@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanderlust Discover Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Wanderlust</div>
+    <nav class="site-nav">
+      <button class="nav-tab is-active" data-target="discover">Discover</button>
+      <button class="nav-tab" data-target="assistant">Assistant</button>
+    </nav>
+    <button class="profile-button" aria-label="Open profile">
+      <span class="profile-dot"></span>
+    </button>
+  </header>
+
+  <main>
+    <section id="discover" class="view is-visible">
+      <header class="view-header">
+        <h1>Discover Your Next Adventure</h1>
+        <p>Explore curated city highlights and save them straight to your travel assistant.</p>
+      </header>
+      <div class="card-grid">
+        <article class="destination-card" data-place="taipei">
+          <h2>Taipei</h2>
+          <p>Neon nights and mountain mornings.</p>
+        </article>
+        <article class="destination-card" data-place="paris">
+          <h2>Paris</h2>
+          <p>Art, romance, and rooftop views.</p>
+        </article>
+        <article class="destination-card" data-place="capeTown">
+          <h2>Cape Town</h2>
+          <p>Coastal drives with dramatic cliffs.</p>
+        </article>
+        <article class="destination-card" data-place="london">
+          <h2>London</h2>
+          <p>Heritage meets cutting-edge culture.</p>
+        </article>
+        <article class="destination-card" data-place="tokyo">
+          <h2>Tokyo</h2>
+          <p>Futuristic skylines and ancient shrines.</p>
+        </article>
+        <article class="destination-card" data-place="lagoComo">
+          <h2>Lago di Como</h2>
+          <p>Crystal lakeside escapes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="assistant" class="view">
+      <header class="view-header">
+        <h1>Trip Assistant</h1>
+        <p>Spin the globe, drop pins, and uncover why each destination should make your shortlist.</p>
+      </header>
+      <div class="assistant-layout">
+        <div class="globe-panel" aria-label="Interactive globe">
+          <div class="globe">
+            <div class="globe-overlay"></div>
+            <button class="globe-pin" style="--x: 62%; --y: 30%;" data-place="paris" aria-label="Pin Paris"></button>
+            <button class="globe-pin" style="--x: 75%; --y: 45%;" data-place="lagoComo" aria-label="Pin Lago di Como"></button>
+            <button class="globe-pin" style="--x: 52%; --y: 58%;" data-place="london" aria-label="Pin London"></button>
+            <button class="globe-pin" style="--x: 85%; --y: 52%;" data-place="taipei" aria-label="Pin Taipei"></button>
+            <button class="globe-pin" style="--x: 82%; --y: 68%;" data-place="tokyo" aria-label="Pin Tokyo"></button>
+            <button class="globe-pin" style="--x: 38%; --y: 68%;" data-place="capeTown" aria-label="Pin Cape Town"></button>
+          </div>
+        </div>
+        <div class="details-panel">
+          <div class="active-destination" aria-live="polite">
+            <span class="badge">Pinned Highlight</span>
+            <h2 id="active-destination-name">Select a destination</h2>
+            <p id="active-destination-description">Tap a pin on the globe to see why travelers rave about it.</p>
+            <ul id="active-destination-highlights" class="highlight-list"></ul>
+          </div>
+          <div class="pinned-collection">
+            <header>
+              <h3>My pinned places</h3>
+              <p>Everything awesome you&apos;re considering for your next trip.</p>
+            </header>
+            <div id="pinned-list" class="pinned-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for explorers looking for their next unforgettable story.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
