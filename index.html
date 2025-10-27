@@ -63,13 +63,9 @@
       <div class="assistant-layout">
         <div class="globe-panel" aria-label="Interactive globe">
           <div class="globe">
+            <canvas id="earth-canvas" aria-hidden="true"></canvas>
             <div class="globe-overlay"></div>
-            <button class="globe-pin" style="--x: 62%; --y: 30%;" data-place="paris" aria-label="Pin Paris"></button>
-            <button class="globe-pin" style="--x: 75%; --y: 45%;" data-place="lagoComo" aria-label="Pin Lago di Como"></button>
-            <button class="globe-pin" style="--x: 52%; --y: 58%;" data-place="london" aria-label="Pin London"></button>
-            <button class="globe-pin" style="--x: 85%; --y: 52%;" data-place="taipei" aria-label="Pin Taipei"></button>
-            <button class="globe-pin" style="--x: 82%; --y: 68%;" data-place="tokyo" aria-label="Pin Tokyo"></button>
-            <button class="globe-pin" style="--x: 38%; --y: 68%;" data-place="capeTown" aria-label="Pin Cape Town"></button>
+            <div class="globe-pin-layer"></div>
           </div>
         </div>
         <div class="details-panel">
@@ -95,6 +91,7 @@
     <p>Built for explorers looking for their next unforgettable story.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
